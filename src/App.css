@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --light-bg-color: #eeeeee;
+    --dark-bg-color: #393e46;
+    --green-bg-color: #54e346;
+    --blue-bg-color: #207dff;
+}
+
+body {
+    color: var(--dark-bg-color);
+    text-align: center;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.nav {
+    height: 4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.5rem;
+    background-color: var(--dark-bg-color);
+    color: var(--light-bg-color);
+}
+
+.casilla {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    font-weight: 500;
+    border: 4px solid var(--blue-bg-color);
+    background-color: var(--light-bg-color);
+}
+
+.casilla:hover {
+    background-color: rgb(241, 251, 255);
+    cursor: pointer;
+}
+
+.tablero {
+    border: 3px solid var(--blue-bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 306px;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.btn {
+    margin-top: 0rem;
+    height: 2.5rem;
+    width: 80%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.info {
+    font-size: 1.5rem;
+}
+
+.status {
+    font-weight: 500;
+}
+
+.movimientos {
+    list-style: none;
+}
+
+.movimientos li button {
+    min-width: 40%;
+    height: 2rem;
+    border: 0px;
+    border-radius: 7px;
+    margin-top: 0.5em;
+    background-color: var(--green-bg-color);
+    font-weight: bold;
+}
+
+.movimientos li button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 197, 26);
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    .btn {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .titulo {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .info {
+        width: 50%;
+        text-align: center;
+    }
+    .tablero {
+        width: 306px;
+    }
+    .btn {
+        width: 40%;
+    }
+}
